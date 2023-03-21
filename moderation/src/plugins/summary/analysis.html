@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarizr | Analysis</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-md-8 content mt-5">
+                <div class="row">
+                    <div class="col-md-10 mb-6">
+                        <h2 id="appTitle">SUMMARIZR</h2>
+                        <p id="appTagline">Analyze and Summarize your articles on the fly..</p>
+                    </div>
+                    <div class="col-md-2 mb-6">
+                    </div>
+                </div>
+                <!-- Analysis -->
+                <div class="analysis">
+                    <div class="analysis-score">
+                        <div class="row">
+                            <div class="col-md-8 offset-md-2">
+                                <div class="text-center">
+                                    <small>Content Depth Score</small>
+                                    <div class="content-depth-score text-center">60</div>
+                                    <hr />
+                                    <div class="content-depth-score-summary"></div>
+                                    <hr /><small>Here is the breakdown:</small><br /><br />
+                                </div>
+                                <p class="content-depth-score-breakdown text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group text-center" id="summaryNavButtons">
+                        <button type="button" name="previous" class="btn btn-warning" onclick="window.location.href = 'index.html'" ">Go Back</button>
+                        <button type="button " name="print " class="btn btn-success " onclick="window.print() ">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bundle-analyzer.js"></script>
+</body>
+
+</html>

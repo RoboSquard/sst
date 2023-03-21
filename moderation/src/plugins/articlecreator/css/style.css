@@ -1,0 +1,97 @@
+
+	html, body { background-color: #d4e3e5;
+	/* background: url(../images/bg/coffee.jpg) no-repeat center center fixed; */
+	width: 100%;
+	padding-top:15px;
+    background-size: cover;}
+	
+/*	html, body { background-color: #fff;
+	background: url(../images/paper04.jpg) repeat; 
+} */
+	
+	body {
+	margin: 0;
+	line-height: 1.4em;
+	font-family: Helvetica, Arial, serif;
+	color:#555;
+
+}
+
+	.container {
+	width: 100%; 
+	border: 0px; 
+	border-radius: 10px; 
+/*	box-shadow: 5px 5px 10px #888; */
+	background-color: #FFFFFF;
+	padding: 10px 40px 26px 40px; 
+	margin-bottom: 30px; }
+	
+	.contentimg { 
+	max-width:360px;
+	padding-left: 20px;
+	margin-left: 20px;
+	height:auto;
+	clear: both;
+	float: right;
+	overflow:hidden;
+	}
+	
+
+	h3 {
+	color: #0cb5b3;
+}
+	body,td,th {
+	font-family: Helvetica, Arial, serif;
+}
+
+
+
+	
+
+@media (min-width: 701px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+ html,body { padding-top:0;
+ 
+ }
+
+  .container {
+    margin-bottom: 0px;
+  }
+	.contentimg { 
+	max-width:300px;
+	padding-left: 20px;
+	height:auto;
+	clear: both;
+	float: right;
+	overflow:hidden;
+	}
+	
+	.catthumbnail { 
+	width:60px;
+	height:60px;
+	}
+	
+}
+
+
+@media (max-width: 480px) {
+	.contentimg { 
+	max-width:100%;
+	padding-left: 20px;
+	height:auto;
+	clear: both;
+	float: right;
+	overflow:hidden;
+	}
+	
+	.catthumbnail { 
+	width:48px;
+	height:48px;
+	}
+	
+}

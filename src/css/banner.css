@@ -1,0 +1,53 @@
+.background-animated-stream {
+  width: 100%;
+  height: 404px;
+  background-color: #4277a3;
+  background-image: url("../../src/img/stream.jpg");
+  -webkit-animation: infiniteScrollBg 35s linear infinite;
+          animation: infiniteScrollBg 35s linear infinite;
+}
+
+@-webkit-keyframes infiniteScrollBg {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% -808px;
+  }
+}
+
+@keyframes infiniteScrollBg {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% -808px;
+  }
+}
+
+.background-animated-bio {
+  width: 100%;
+  height: 404px;
+  background-color: #4277a3;
+  background-image: url("../../src/img/bio.jpg");
+  -webkit-animation: infiniteScrollBg 35s linear infinite;
+          animation: infiniteScrollBg 35s linear infinite;
+}
+
+@-webkit-keyframes infiniteScrollBg {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% -808px;
+  }
+}
+
+@keyframes infiniteScrollBg {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: 50% -808px;
+  }
+}

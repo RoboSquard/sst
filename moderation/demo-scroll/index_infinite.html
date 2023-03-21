@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<title>jQuery Plugin - Social Stream Network Wall</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="inc/layout.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/dcsns_wall.css" media="all" />
+
+<style>
+  .AutoScroll {
+	max-height: 100vw;
+	overflow-y: hidden;
+  }
+
+h3 {text-align: center;}
+#wall {padding: 10px 0 0 0; min-height: 2000px;}
+#wrapper, #container {width:100%; padding: 0;}
+#nav-container {margin-bottom: 20px;}
+
+.Loop {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+
+section {
+    position: relative;
+    text-align: center;
+    min-height: 300px;
+    max-height: 700px;
+    height: 80%;
+}
+
+.inner-wrap {
+    animation: autoscroll 10s linear infinite;
+}
+
+@keyframes autoscroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -75%, 0);
+    }
+}
+
+
+</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="inc/js/jquery.plugins.js"></script>
+<script type="text/javascript" src="inc/js/jquery.site.js"></script>
+<script type="text/javascript" src="js/jquery.social.stream.wall.1.7.js"></script>
+<script type="text/javascript" src="js/jquery.social.stream.1.6.min.js"></script>
+  
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$('#social-stream').dcSocialStream({
+		feeds: {
+			rss: {
+				id: 'https://www.socialmediaexaminer.com/feed/',
+				out: 'intro,thumb,title,text,user'
+			},
+			vimeo: {
+				id: 'brad',
+				out: 'intro,thumb,title,text,user'
+			},
+			youtube: {
+				id: 'FilmTrailerZone/UUPPPrnT5080hPMxK1N4QSjA',
+				api_key: 'AIzaSyARvEcxSEf7-MHim6vlY6-ugXNu47wA7ik',
+				thumb: 'medium',
+				out: 'intro,thumb,title,user'
+			},
+			pinterest: {
+				id: 'jaffrey,designchemical/design-ideas',
+				out: 'intro,thumb,title,user'
+			},
+			flickr: {
+				id: '/102937252@N02,/37005413@N00',
+				out: 'intro,thumb,title,user'
+			},
+			tumblr: {
+				id: 'arsenal-gunners,dailyarsenal,arsenalpride,arsenalfootballclub',
+				out: 'intro,thumb,title,user',
+				thumb: 250
+			}
+		},
+		rotate: {
+			delay: 0
+		},
+		style: {
+			layout: 'modern',
+			colour: 'dark'
+		},
+		remove: 'https://vimeo.com/654139170',
+		twitterId: 'designchemical',
+		control: false,
+		filter: false,
+		wall: true,
+		center: true,
+		cache: false,
+		max: 'limit',
+		limit: 10,
+		iconPath: 'images/dcsns-dark/',
+		imagePath: 'images/dcsns-dark/'
+	});
+				 
+});
+</script>
+
+  </head>
+  <body>
+    <div class="container" id="container"> 
+
+<main class="Loop js-loop">
+    <div class="inner-wrap">
+	
+<div id="wall">	
+	<div id="social-stream"></div>
+</div>	
+
+    </div>
+</main>	
+
+    </div>
+
+<script>
+
+/*
+Ininite looping scroll.
+Tested and works well in latest verions of Chrome, Safari and Firefox.
+
+Not built/tested for mobile.
+*/
+
+'use strict';
+
+var doc = window.document,
+context = doc.getElementsByClassName('js-loop')[0],
+    clones = context.getElementsByClassName('is-clone'),
+    disableScroll,
+    scrollHeight,
+    scrollPos,
+    clonesHeight,
+    i;
+
+function getScrollPos() {
+    return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+}
+
+function setScrollPos(pos) {
+    context.scrollTop = pos;
+}
+
+function getClonesHeight() {
+    clonesHeight = 0;
+    i = 0;
+
+    for (i; i < clones.length; i += 1) {
+        clonesHeight = clonesHeight + clones[i].offsetHeight;
+    }
+
+    return clonesHeight;
+}
+
+function reCalc() {
+    window.requestAnimationFrame(reCalc);
+    scrollPos = getScrollPos();
+    scrollHeight = context.scrollHeight;
+    clonesHeight = getClonesHeight();
+
+    if (scrollPos <= 0) {
+        setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+    }
+}
+
+// Calculate variables
+window.requestAnimationFrame(reCalc);
+
+function scrollUpdate() {
+    if (!disableScroll) {
+        scrollPos = getScrollPos();
+
+        if (clonesHeight + scrollPos >= scrollHeight) {
+            // Scroll to the top when you’ve reached the bottom
+            setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+            disableScroll = true;
+        } else if (scrollPos <= 0) {
+            // Scroll to the bottom when you reach the top
+            setScrollPos(scrollHeight - clonesHeight);
+            disableScroll = true;
+        }
+    }
+
+    if (disableScroll) {
+        // Disable scroll-jumping for a short time to avoid flickering
+        window.setTimeout(function() {
+            disableScroll = false;
+        }, 80);
+    }
+}
+
+context.addEventListener('scroll', function() {
+    window.requestAnimationFrame(scrollUpdate);
+}, false);
+
+window.addEventListener('resize', function() {
+    window.requestAnimationFrame(reCalc);
+}, false);
+
+
+
+
+
+// Just for the demo: Center the middle block on page load
+window.onload = function() {
+    setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (window.innerHeight - clones[0].offsetHeight) / 2));
+};
+
+
+</script>
+
+  </body>
+</html>

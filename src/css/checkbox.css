@@ -1,0 +1,68 @@
+/*html,body{
+	min-height: 100vh;
+	min-width: 100vw;
+}
+.parent{
+	height: 100vh;
+}*/
+.parent>.row{
+	display: flex;
+	align-items: center;
+	/*height: 100%;*/
+}
+.col img{
+	/*height:100px;*/
+	width: 100%;
+	cursor: pointer;
+	transition: transform 1s;
+	object-fit: cover;
+}
+.col label{
+	overflow: hidden;
+	position: relative;
+}
+.imgbgchk:checked + label>.tick_container{
+	opacity: 0.75;
+}
+/*         aNIMATION */
+.imgbgchk:checked + label>img{
+	border: 4px solid #4783B0;
+}
+.tick_container {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 0%;
+	left: 100%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	cursor: pointer;
+	text-align: center;
+}
+.tick {
+	  position: absolute;
+color: #4A79A3;
+background-color: #fff;
+padding: 10px;
+top: 0;
+right: 0;
+  display: block !important;
+}
+
+.box {
+padding-top: 20px;
+padding-bottom: 10px;
+display: none;
+margin-top: 20px;
+width: 100%;
+text-align: center;
+border: 3px solid #ccc;
+border-radius: 5px;
+}
+
+
+.card-img-overlay {
+background-color: rgba(0, 0, 0, 0.5);
+cursor: pointer;
+}
+

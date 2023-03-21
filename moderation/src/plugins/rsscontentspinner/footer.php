@@ -1,0 +1,1 @@
+<center><a href="https://spinner.fullcontentrss.com">RSS Content Spinner</a>  Powered by. <a href="https://fullcontentrss.com" target="_blank">Full RSS</a> | <a href="mailto:fullcontentrss@gmail.com" target="_top">Contact Us</a></center>

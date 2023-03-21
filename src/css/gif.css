@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+/********** PRODUCTHUNT *********/
+
+.p-player-container {
+    display: block;
+    background-color: #222;
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(https://suite.social/images/networks/Producthunt.jpg);
+    background-repeat: no-repeat;	
+    background-position: center top;
+    background-size: contain;
+    -moz-background-size: contain;		
+    /*border: 1px solid black;*/
+	width: 431px;
+}
+
+.p-player-container #p-playing {
+  display: none;
+}
+.p-player-container .gif {
+  visibility: hidden;
+}
+.p-player-container #p-playing:checked ~ .gif {
+  visibility: visible;
+}
+.p-player-container #p-playing:checked ~ .btn-play {
+  display: none;
+}
+.p-player-container #p-playing:checked ~ .btn-stop {
+  display: block;
+}
+
+/********** ENVATO *********/
+
+.e-player-container {
+    display: block;
+    background-color: #222;
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(https://suite.social/images/networks/Envato.jpg);
+    background-repeat: no-repeat;	
+    background-position: center top;
+    background-size: contain;
+    -moz-background-size: contain;		
+    /*border: 1px solid black;*/
+	width: 431px;
+}
+
+.e-player-container #e-playing {
+  display: none;
+}
+.e-player-container .gif {
+  visibility: hidden;
+}
+.e-player-container #e-playing:checked ~ .gif {
+  visibility: visible;
+}
+.e-player-container #e-playing:checked ~ .btn-play {
+  display: none;
+}
+.e-player-container #e-playing:checked ~ .btn-stop {
+  display: block;
+}
+
+/********** BUTTONS *********/
+
+.gif-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.6rem;
+  border-top: 1px solid white;
+  font-family: Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+}
+.gif-btn:hover {
+  background-color: #444;
+}
+.gif-btn.btn-stop {
+  display: none;
+}
+.gif-btn.btn-stop .icon-stop {
+  font-size: 135%;
+  line-height: 1px;
+}

@@ -1,0 +1,5 @@
+title: //h1
+body: //article
+strip: //picture/source
+strip: //div[contains(@class,'adWrapper')]
+replace_string(srcSet=): src=

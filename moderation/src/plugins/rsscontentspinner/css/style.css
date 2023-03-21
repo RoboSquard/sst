@@ -1,0 +1,98 @@
+
+
+
+	
+/*	html, body { background-color: #fff;
+	background: url(../images/paper04.jpg) repeat; 
+} */
+	
+
+
+	html, body { background-color: #e0ebe9; }
+	body { margin: 0; line-height: 1.4em; font-family: Helvetica, Arial, serif; }
+	label, input, select, textarea { font-family: Helvetica, Arial, serif; }
+	li { color: #404040; }
+	li.active a { font-weight: bold; color: #666 !important; }
+	form {margin-left:00px;}
+	form .controls { margin-left: 160px !important; }
+	label { width: 140px !important; }
+	fieldset legend { padding-left: 160px; line-height: 20px !important; margin-bottom: 10px !important;}
+	.form-actions { margin-bottom:50px; padding-left: 160px !important; }
+	.popover-inner { width: 205px; }
+	h1 { margin-bottom: 18px; }
+
+	/* JSON Prettify CSS from http://chris.photobooks.com/json/default.htm */
+	.jsonOutput.PRETTY {
+		font-family: Consolas, "Courier New", monospace;
+		background-color: #333;
+		color: #fff;
+		padding: 10px; 
+		border-radius: 4px;
+	}
+	.ERR             { color: #FF0000; font-weight: bold; }
+	.FUNC            { color: #FF0000; font-weight: bold; }
+	.IDK             { color: #FF0000; font-weight: bold; }
+	.KEY             { color: #FFFFFF; font-weight: bold; }
+	.BOOL            { color: #00FFFF; }
+	.NUMBER          { color: #7FFF00; }
+	.DATE            { color: #6495ED; }
+	.REGEXP          { color: #DEB887; }
+	.STRING          { color: #D8FFB0; }
+	.UNDEF           { color: #91AA9D; font-style: italic; }
+	.NULL            { color: #91AA9D; font-style: italic; }
+	.EMPTY           { color: #91AA9D; font-style: italic; }
+	.HTML span.ARRAY { color: #91AA9D; font-style: italic; }
+	.HTML span.OBJ   { color: #91AA9D; font-style: italic; }
+	table.OBJ        { background-color: #22353C; }
+	table.ARRAY      { background-color: #252C47; }
+
+	.container {
+	width: 740px; padding-bottom: 60px;
+	border: 0px; 
+	border-radius: 0; 
+/*	box-shadow: 5px 5px 10px #888; */
+	background-color: #FFFFFF;
+	padding: 10px 50px 26px 50px; 
+	margin-bottom: 30px; }
+	
+	.contentimg { 
+	max-width:360px;
+	padding-left: 20px;
+	margin-left: 20px;
+	height:auto;
+	clear: both;
+	float: right;
+	overflow:hidden;
+	}
+	
+	label { width: 120px; margin-right: 10px !important; }
+	
+
+
+	legend {border:0;
+	padding-left:100px;}
+	fieldset {margin-top:20px; margin-bottom:20px;}
+	.controls {margin-top:-20px;}
+	.control-group {margin-top:10px;}
+	
+	
+	h1 {
+	margin-bottom: 4px;
+}
+
+	h3 {
+	color: #0cb5b3;
+}
+	body,td,th {
+	font-family: Helvetica, Arial, serif;
+}
+    .style1 {font-family: Helvetica, Arial, serif;}
+	
+.catlist {margin:10px 5px 0 5px; margin-bottom:40px;}
+
+	.catthumbnail { 
+	width:80px;
+	height:80px;
+	}
+
+	

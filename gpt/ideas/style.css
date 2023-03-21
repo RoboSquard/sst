@@ -1,0 +1,158 @@
+.tooltip  {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+  
+/*.master-box {
+  padding: 0 15%;
+}*/
+
+@media (max-width:768px){
+  .master-box {
+    padding: 0 0!important;
+  }
+}
+
+.faq-header { /* HEADER */
+  background: #454d55;
+  /*background: -webkit-linear-gradient(to right, #303f94, #4b558a);
+  background: linear-gradient(to right, #303f94, #4b558a);*/
+  padding: 0 30px 10px 0;
+  text-align: center;
+  color: white;
+}
+
+h1.title {
+  /*font-size: 2.1em;*/
+  letter-spacing: -1px;
+  font-weight: 400;
+}
+
+#myInput {
+  width: 50%;
+  font-size: 18px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #000;
+  margin: 15px 0 15px 0;
+}
+
+#myBtnContainer {
+  margin: 15px;
+  letter-spacing: 5px;
+}
+
+/* Style the buttons */
+.btn-chat {
+  border: none;
+  outline: none;
+  padding: 8px 15px 8px 0;
+  margin: 4px;
+  background-color: #3498db;
+  color: #ffffffd2;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.2);
+}
+
+.btn-chat:hover {
+  background: #2285c9;
+  color: white;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3), 0 3px 5px 0 rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-chat.active {
+  background: #2285c9;
+  color: white;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3), 0 3px 5px 0 rgba(0,0,0,0.3);
+}
+
+.btn-chat::before {
+  content: '\00bb   ';
+  font-size: 18px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.btn-chat.active::before {
+  content: '\00bb   ';
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#myUL {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+#myUL li span {
+  cursor: pointer;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  border: 0px solid lightgrey;
+  margin-top: -1px;
+  padding: 10px 0px 10px 0px;
+  margin: 0;
+  text-decoration: none;
+  font-size: 16px; 
+  color: #fff;
+  display: block;
+}
+
+#myUL li span:hover:not(.header) {
+    background-color: #3f6791;
+    border: 0px solid grey;
+}
+
+.filterDiv {
+  display: none; /* Hidden by default */
+  transition: all 0.3s;
+  margin-bottom: 4px;
+}
+
+.show {
+  display: block;
+}
+
+.accordion-thumb {
+  font-weight: bold;
+  background: #3f6791;
+}
+
+/* Active answer */
+.filterDiv.is-active .accordion-thumb::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.accordion-thumb::before {
+  content: '';
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  margin-right: 1rem;
+  margin-left: .5rem;
+  vertical-align: middle;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+
+.accordion-panel { /* PANEL */
+    padding: 10px 20px 10px 20px;
+    display: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    background: #343a40;
+}

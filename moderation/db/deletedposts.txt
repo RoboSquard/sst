@@ -1,0 +1,9 @@
+[
+    "Blogger Screen",
+    "Flickr Screen",
+    "Instagram Screen",
+    "Linkedin Screen",
+    "NEW POST",
+    "Pinterest Screen",
+    "Police look to ID suspect who allegedly vandalized McDonald\u2019s over coffee order"
+]

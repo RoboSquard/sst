@@ -1,0 +1,19 @@
+{
+    "name": "summarizer",
+    "version": "1.0.0",
+    "description": "Summarize articles on the fly",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "bundle-summarizer": "browserify ./assets/js/summarizer.js -o ./assets/js/bundle-summarizer.js",
+        "bundle-analyzer": "browserify ./assets/js/analyzer.js -o ./assets/js/bundle-analyzer.js"
+    },
+    "author": "Shycoder",
+    "license": "MIT",
+    "dependencies": {
+        "browserify": "^17.0.0",
+        "dotenv": "^16.0.1",
+        "watchify": "^4.0.0"
+    },
+    "private": true
+}
